@@ -1,31 +1,23 @@
-import styled from 'styled-components'
-
-const Opcao = styled.li`
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-    padding: 0 5px;
-    cursor: pointer;
-    min-width: 120px;
-`
-
-const Opcoes = styled.ul`
-    display: flex;
-`
-
-const textoOpcoes = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE']
+const textoOpcoes = ['CATEGORIAS', 'FAVORITOS', 'MINHA ESTANTE'];
 
 function OpcoesHeader() {
     return (
-        <Opcoes>
-            { textoOpcoes.map( (texto) => (
-                <Opcao><p>{texto}</p></Opcao>
-            ) ) }
-      </Opcoes>
-    )
+
+        
+        <ul className="d-flex list-unstyled mx-4 p-0 align-items-center">
+            {textoOpcoes.map((texto) => (
+                <li 
+                    key={texto} 
+                    className="px-2"
+                    style={{ minWidth: '120px', cursor: 'pointer', textAlign: 'center' }}
+                >
+                    <span className="fw-semibold">{texto}</span>
+                </li>
+            ))}
+        </ul>
+        
+    );
 }
 
-export default OpcoesHeader
+// Garanta que o export default está aqui no final
+export default OpcoesHeader;
