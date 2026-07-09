@@ -182,23 +182,23 @@ function Pesquisa() {
                         {/* Botão Anterior */}
                         <li className={`page-item ${pagina === 1 ? 'disabled' : ''}`}>
                             <button
-                                className="btn btn-outline-primary px-4 py-2 fw-bold"
+                                className="btn btn-light bg-white text-dark px-4 py-2 fw-bold"
                                 onClick={irParaPaginaAnterior}
                                 disabled={pagina === 1} // Desativa o botão se estiver na página 1
                             >
-                                <i className="bi bi-arrow-left me-2"></i> Anterior
+                                <i className="bi bi-arrow-left me-2 "></i> Anterior
                             </button>
                         </li>
 
                         {/* Indicador da página atual */}
                         <li className="d-flex align-items-center px-3">
-                            <span className="text-muted fw-bold">Página {pagina}</span>
+                            <span className="fw-bold text-white">Página {pagina}</span>
                         </li>
 
                         {/* Botão Próximo */}
                         <li className="page-item">
                             <button
-                                className="btn btn-outline-primary px-4 py-2 fw-bold"
+                                className="btn btnlight px-4  text-dark py-2 fw-bold bg-white"
                                 onClick={irParaProximaPagina}
                             >
                                 Próximo <i className="bi bi-arrow-right ms-2"></i>
